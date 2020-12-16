@@ -1,0 +1,721 @@
+// animation
+// animation
+// animation
+// animation
+// animation
+// animation
+
+.change-color{
+    color: hsl(210, 11%, 14%);
+    &:hover{
+        background: hsl(210, 11%, 14%);
+        color: rgb(247, 247, 247);
+    }
+}
+.change-color_02{
+    border-bottom: 1px solid hsl(210, 11%, 14%);
+}
+
+.change-color_03{
+    color: rgb(247, 247, 247);
+}
+
+.change-color_04{
+    border-bottom: 1px solid rgb(247, 247, 247);
+}
+
+.span_move{
+    transform: rotate(360deg);
+}
+
+
+// animation
+// animation
+// animation
+// animation
+// animation
+// animation
+
+// ヘッダー始まり
+header{
+    width: 100%;
+    height: 100vh;
+    background: hsl(210, 11%, 14%);
+    nav{
+        border-bottom: 1px solid rgb(247, 247, 247);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        ul{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            li{
+                width: 25%;
+                text-align: center;
+                line-height: 4em;
+                a{
+                    color: rgb(247, 247, 247);
+                    text-decoration: none;
+                    display: inline-block;
+                    width: 100%;
+                    font-weight: bold;
+                    &:hover{
+                        background: rgb(247, 247, 247);
+                        color:  hsl(210, 11%, 14%);
+                    }
+                }
+            }
+        }
+    }
+    // ハンバーガメニュー
+    .ham_btn{
+        position: fixed;
+        top: 1em;
+        right: 2em;
+        width: 50px;
+        height: 35px;
+        display: none;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: flex-end;
+        span{
+        width: 100%;
+        height: 2px;
+        background: #aaa;
+        }
+    }
+
+    .header_middle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: rgb(247, 247, 247);
+            font-size: 4.2em;
+            display: none;
+            text-shadow: 0 0 8pxrgb(247, 247, 247);
+            span{
+                display: block;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+    .sp_nav{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        z-index: 99;
+        .sp_nav_in{
+            height: 100vh;
+            background: rgb(247, 247, 247);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul{
+                width: 50%;
+                li{
+                    text-align: center;
+                    a{
+                        font-size: 1.7em;
+                        font-weight: bold;
+                        color: hsl(210, 11%, 14%);
+                        text-decoration: none;
+                        line-height: 2em;
+                        display: block;
+                        line-height: 3em;
+                    }
+                } 
+            } 
+        }
+    }
+}
+// ヘッダー終わり
+
+// ヘッダーレスポンシブル
+@media screen and (max-width:750px) {
+    header nav ul{
+        display: none;
+    }
+    header .ham_btn{
+        display: flex;
+    }
+    header .sp_nav{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:690px) {
+    header .sp_nav{
+        width: 80%;
+    }
+    header .header_middle h1{
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width:600px) {
+    header .header_middle h1{
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width:500px) {
+    header .sp_nav{
+        width: 77%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    header .header_middle h1{
+        font-size: 2.5em;
+    }
+    header .sp_nav{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    header .header_middle h1{
+        font-size: 2em;
+    }
+}
+
+// main 始まり
+main{
+    // article_works 始まり
+    .works{
+        padding: 4em 3em 5em 3em;
+        box-sizing: border-box;
+        background: rgb(247, 247, 247);
+        text-align: center;
+            h2{
+                font-size: 2em;
+                font-weight: bold;
+                color: hsl(210, 11%, 14%);
+            }
+            p{
+                margin: 2em 0;
+                color: hsl(210, 11%, 14%);
+            }
+            .works_exhibition{
+                margin: 0 auto;
+                width: 80%;
+                display: grid;
+                grid-template-columns: repeat(2 , 1fr);
+                grid-template-rows: repeat(1 , 450px);
+                gap: 3em;
+                .works_exhibition_01,
+                .works_exhibition_02{
+                    border:1px solid hsl(210, 11%, 14%);
+                    .img{
+                        width: 100%;
+                        height: 70%;
+                        background: hsl(210, 11%, 14%);
+                    }
+                    .site_name{
+                        color: hsl(210, 11%, 14%);
+                        font-size: 1.5em;
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    a{
+                        color: rgb(27, 170, 227);
+                        font-size: 1.5em;
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                    }
+                }
+            }
+    }
+    // article_works　終わり
+
+    // article_skill　始まり
+    .skill{
+        box-sizing: border-box;
+        background: hsl(210, 11%, 14%);
+        text-align: center;
+        padding: 4em 3em;
+        h2{
+            font-size: 2em;
+            font-weight: bold;
+            color: rgb(247, 247, 247);
+        }
+        p{
+            font-size: 1.2em;
+            margin: 2em 0;
+            color: rgb(247, 247, 247);
+        }
+        .skill_set{
+            margin: 0 auto;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            grid-template-rows: repeat(2 , 225px);
+            gap: 3em;
+            .skill_set_in{
+                border:1px solid  rgb(247, 247, 247);
+                display: flex;
+                .img{
+                    width: 30%;
+                    height: 100%;
+                    background: rgb(255, 255, 255);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 55%;
+                        object-fit: cover;
+                    }
+                }
+                .coment{
+                    padding: 1em;
+                    box-sizing: border-box;
+                    width: 70%;
+                    height: 100%;
+                    color:  rgb(247, 247, 247);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    // article_skill　終わり
+
+    // article_profile　始まり
+    .profile{
+        background:hsl(210, 11%, 14%);
+        text-align: center;
+        padding: 4em 3em;
+        border-top: 1px solid  rgb(247, 247, 247);
+        // box-sizing: border-box;
+        h2{
+            font-size: 2em;
+            font-weight: bold;
+            color: rgb(247, 247, 247);
+        } 
+        .explanation{
+            margin: 2em 0;
+            color:rgb(247, 247, 247);
+        }
+        .profile_in{
+            width: 100%;
+            height: 450px;
+            display: flex;
+            .profile_text{
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:rgb(247, 247, 247);
+                font-size: 1.1em;
+                line-height: 3em;
+            }
+            #slick01{
+                width: 50%;
+                height: 100%;
+                .slick_in_01{
+                    width: 100%;
+                    height: 100%;
+                    background: url(../image/slick_in_01.jpg);
+                    background-size: cover;
+                    background-position: center;
+                }
+                .slick_in_02{
+                    width: 100%;
+                    height: 100%;
+                    background: url(../image/slick_in_02.jpg);
+                    background-size: cover;
+                    background-position: center;
+                }
+                .slick_in_03{
+                    width: 100%;
+                    height: 100%;
+                    background: url(../image/slick_in_03.jpg);
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+        }
+    }
+    // article_proifile　終わり
+
+    // article_contact　始まり
+    .contact{
+        background:  rgb(247, 247, 247);
+        text-align: center;
+        padding: 4em 3em 2em 3em;
+        box-sizing: border-box;
+        h2{
+            font-size: 2em;
+            font-weight: bold;
+            color: hsl(210, 11%, 14%);
+        } 
+        p{
+            margin: 1em 0;
+            color: hsl(210, 11%, 14%);
+            span{
+                display: block;
+                line-height: 6em;
+            }
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                color: hsl(210, 11%, 14%);
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+    }
+    // article_contact　終わり
+}
+// メイン　終わり
+
+// メイン＿works＿レスポンシブル 始まり
+@media screen and (max-width:1200px) {
+    main .works .works_exhibition{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:950px) {
+    main .works .works_exhibition{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:850px) {
+    main .works .works_exhibition{
+        grid-template-columns: repeat(1 , 1fr);
+        grid-template-rows: repeat(2 , 475px);
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    main .works{
+        padding: 4em 1.5em 5em 1.5em;
+        .works_exhibition{
+            grid-template-columns: repeat(1 , 1fr);
+            grid-template-rows: repeat(2 , 450px);
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    main .works{
+        padding: 3em 1.5em;
+        h2{
+            font-size: 1.7em;
+        }
+        p{
+            font-size: .8em;
+        }
+        .works_exhibition{
+            grid-template-columns: repeat(1 , 1fr);
+            grid-template-rows: repeat(2 , 400px);
+            width: 70%;
+            .works_exhibition_01,
+            .works_exhibition_02{
+                .site_name{
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    main .works{
+        padding: 3em 1em;
+        h2{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: .8em;
+        }
+        .works_exhibition{
+            grid-template-columns: repeat(1 , 1fr);
+            grid-template-rows: repeat(2 , 350px);
+            width: 70%;
+            .works_exhibition_01,
+            .works_exhibition_02{
+                .site_name{
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    main .works{
+        padding: 3em 1em;
+        h2{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: .8em;
+        }
+        .works_exhibition{
+            grid-template-columns: repeat(1 , 1fr);
+            grid-template-rows: repeat(2 , 300px);
+            width: 70%;
+            .works_exhibition_01,
+            .works_exhibition_02{
+                .site_name{
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+}
+// メイン＿works＿レスポンシブル 終わり
+
+
+
+// メイン＿skill＿レスポンシブル 始まり
+@media screen and (max-width:1200px) {
+    main .skill{
+        padding: 4em 2em;
+        .skill_set{
+            width: 90%;
+        }
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    main .skill .skill_set .skill_set_in{
+        .img{
+            width: 35%;
+        }
+        .coment{
+            width: 65%;
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    main .skill .skill_set .skill_set_in{
+        .img{
+            width: 40%;
+        }
+        .coment{
+            width: 60%;
+            font-size: .9em;
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    main .skill{
+        padding: 4em 1em;
+        .skill_set{
+            margin: 0 auto;
+            width: 85%;
+            display: grid;
+            grid-template-columns: repeat(1 , 1fr);
+            grid-template-rows: repeat(4 , 175px);
+            gap: 1em;
+            .skill_set_in{
+                .img{
+                    width: 30%;
+                }
+                .coment p{
+                    width: 100%;
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    main .skill .skill_set .skill_set_in{
+        .img{
+            width: 35%;
+        }
+        .coment p{
+            width: 100%;
+        }
+    }
+}
+// メイン＿skill＿レスポンシブル 終わり
+
+
+// メイン＿profile＿レスポンシブル 始まり
+@media screen and (max-width:1200px) {
+    main .profile .profile_in{
+        .profile_text{
+            width: 60%;
+        }
+        #slick01{
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width:1100px) {
+    main .profile {
+        .explanation{
+            margin: 1em 0;
+        }
+        .profile_in{
+            display: block;
+            height: 600px;
+            .profile_text{
+                line-height: 2em;
+                margin: 0 auto;
+                height: 50%;
+            }
+            #slick01{
+                height: 50%;
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:950px) {
+    main .profile {
+        .explanation{
+        }
+        .profile_in{
+            width: 100%;
+            .profile_text{
+                line-height: 2em;
+                margin: 0 auto;
+                height: 50%;
+            }
+            #slick01{
+                height: 50%;
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    main .profile .profile_in{ 
+        #slick01{
+            width: 80%;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+    main .profile{ 
+        width: 85%;
+        .profile_in{ 
+            height: 700px;
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    main .profile {
+        padding: 4em 1.5em;
+        .explanation{
+            
+        }
+        .profile_in{
+            display: block;
+            height: 600px;
+            width: 100%;
+            .profile_text{
+                font-size: 16px;
+                line-height: 2em;
+                margin: 0 auto;
+                height: 60%;
+                width: 100%;
+            }
+            #slick01{
+                height: 40%;
+                width: 85%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px) {
+    main .profile {
+        padding: 4em 1.5em;
+        .explanation{
+            
+        }
+        .profile_in{
+            display: block;
+            height: 600px;
+            width: 100%;
+            .profile_text{
+                font-size: 16px;
+                line-height: 2em;
+                margin: 0 auto;
+                height: 60%;
+                width: 100%;
+            }
+            #slick01{
+                height: 40%;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+// メイン＿profile＿レスポンシブル 終わり
+
+
+// フッター始まり
+footer{
+   text-align: center;
+   background:  rgb(247, 247, 247);
+   box-sizing: border-box;
+   border-top: 1px solid  hsl(210, 11%, 14%);
+    p{
+        color: hsl(210, 11%, 14%);
+        line-height: 5em;
+        font-size: .6em;
+    }
+}
+// フッター終わり
+
+// スリック対応
+.slick-list{
+    height: 100%;
+}
+.slick-track{
+    height: 100%;
+}
+// スリック対応
